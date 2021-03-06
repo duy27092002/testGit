@@ -1,0 +1,98 @@
+.container{
+	font-family: Verdana;
+}
+.header{
+	background-color: #f1e2c5;
+	min-height: 100px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+#logo{
+	width: 350px;
+	height: auto;
+}
+.menu{
+	list-style: none;
+	padding: 55px 15px;
+}
+.list_menu{
+	display: inline-block;
+}
+.link{
+	color: #45250e;
+	font-size: 20px;
+	margin-left: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.link:hover{
+	color: blue;
+}
+#active{
+	color: red;
+}
+.advertisement{
+	background-color: #fef380;
+	min-height: 100px;
+}
+.advertisement_photo{
+	width: 500px;
+	height: auto;
+	margin: 0 110px;
+}
+#photo{
+	margin-bottom: 45px;
+}
+.main{
+	width: 80%;
+	min-height: 800px;
+	margin: 10px auto;
+}
+.tutorial{
+	float: left;
+	width: 70%;
+	background-color: #FFE4B5;
+	min-height: 780px;
+	padding: 10px;
+}
+#food, #video{
+	width: 500px;
+	height: auto;
+	margin-left: 155px;
+}
+.heading1, .heading2, .heading3{
+	text-align: center;
+	color: red;
+}
+.step{
+	text-indent: 30px;
+}
+.author{
+	text-align: right;
+}
+#author:hover{
+	color: red;
+	font-size: 18px;
+	text-decoration: none;
+}
+.resources{
+	float: left;
+	width: 27%;
+	margin-left: 10px;
+	background-color: #E0FFFF;
+	min-height: 780px;
+}
+.other_photo{
+	width: 300px;
+	height: auto;
+	padding: 10px 7px;
+}
+.footer{
+	min-height: 60px;
+	background-color: lightgray;
+	clear: left;
+}
+.copyright{
+	text-align: center;
+	padding-top: 20px;
+}

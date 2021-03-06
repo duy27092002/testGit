@@ -1,0 +1,48 @@
+.container{
+	width: 80%;
+	margin: 0px auto;
+	min-height: 400px;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+#banner{
+	width: 1165px;
+	height: auto;
+}
+.imformation{
+	min-height: 450px;
+	background-color: #99FFCC;
+	background-image: url('images/bg_image.jpg');
+}
+.picture, .data{
+	width: 50%;
+	float: left;
+	padding-top: 10px;
+}
+#picture{
+	width: 350px;
+	height: auto;
+	border-radius: 10px;
+	padding: 20px 0 0 80px;
+}
+.heading1{
+	text-align: center;
+	text-transform: uppercase;
+	color: red;
+}
+.table{
+	padding-left: 100px;
+	line-height: 2;
+}
+.tb_data{
+	font-weight: bolder;
+	padding-right: 100px;
+}
+.contact{
+	font-size: 50px;
+	padding-left: 150px;
+	margin-top: 10px;
+}
+#icon1, #icon2{
+	margin-right: 20px;
+}
