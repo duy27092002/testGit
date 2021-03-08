@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+}
+body{
+	font-family: Arial,sans-serif;
+	width: 100%;
+}
+#nav{
+	background-color: #1772bd;
+	min-height: 80px;
+}
+#nav #container1{
+	width: 80%;
+	margin: 0 auto;
+}
+#nav #container1 #logo, #menu{
+	display: inline-block;
+}
+#nav #container1 #menu ul li{
+	display: inline-block;
+	margin-left: 20px;
+}
+#nav #container1 #menu ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+}
+#nav #container1 #menu ul li #active{
+	background-color: #026aa7;
+	padding: 20px;
+}
+#nav #container1 #menu ul li a:hover{
+	color: #11b719;
+}
+#form #container2{
+	width: 80%;
+	margin: 0px auto;
+	background-color: #00000069;
+}
+#form #container2 input, button{
+	margin: 10px 20px;
+}
+#content{
+	min-height: 900px;
+	width: 80%;
+	margin: 15px auto;
+}
+#content #content_left{
+	background-color: green;
+	float: left;
+	min-height: 890px;
+	width: 75%;
+}
+#content #content_right{
+	background-color: yellow;
+	float: right;
+	min-height: 890px;
+	width: 24%;
+	margin-left: 10px;
+}
+#content #content_photo{
+	min-height: 40px;
+	clear: left;
+}
+#content #content_photo img{
+	width: 100%;
+	height: auto;
+	margin-top: 30px;
+}
+#download{
+	background-color: #f4f7f7;
+	min-height: 150px;
+	text-align: center;
+}
+#download div h1{
+	font-size: 40px;
+	font-weight: 500;
+}
+#download #button_androi{
+	width: 250px;
+	height: 60px;
+	padding: 15px;
+	background-color: #11b719;
+	border-color: #11b719;
+	border:none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+#download #button_ios{
+	width: 250px;
+	height: 60px;
+	padding: 15px;
+	background-color:#35434e; 
+	border-color: #35434e;
+	border:none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+#download button i{
+	margin-right: 10px;
+}
+#footer1{
+	border-bottom:1px solid #afafaf;
+}
+#display{
+	display: grid;
+	grid-template-columns: auto auto;
+	width: 80%;
+	margin: 15px auto;
+}
+#footer1 #menu ul li{
+	display: inline-block;
+}
+#display #logo{
+	margin-top: 10px;
+}
+#menu{
+	margin-top: 40px;
+}
+#footer1 #menu ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 11px;
+	margin-left: 10px;
+}
+#footer1 #menu ul li a:hover{
+	color: #11b719;
+}
+#footer2 #container{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	color: #ffffff;
+	width: 80%;
+	margin: 30px auto;
+}
+#footer2 #container p{
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 2.5;
+}
+#footer2 h3{
+	margin-bottom: 20px;
+}
+#footer3{
+	background-color: #046096;
+	min-height: 80px;
+	padding: 30px 0 30px 150px;
+	color: #ffffff;
+	font-size: 12px;
+}
