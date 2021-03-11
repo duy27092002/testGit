@@ -15,7 +15,8 @@ body{
 	min-height: 80px;
 }
 #nav #container1{
-	width: 80%;
+	/*width: 80%; */
+	width:75%;
 	margin: 0 auto;
 }
 #nav #container1 #logo, #menu{
