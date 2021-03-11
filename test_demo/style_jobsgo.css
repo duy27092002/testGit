@@ -29,7 +29,8 @@ body{
 #nav #container1 #menu ul li a{
 	text-decoration: none;
 	color: #fff;
-	font-size: 14px;
+	/*font-size: 14px;*/
+	font-size:15px;
 	font-weight: normal;
 }
 #nav #container1 #menu ul li #active{
