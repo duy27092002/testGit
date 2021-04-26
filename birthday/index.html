@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			background-color: #07252d;
+		}
+		h1{
+			position: relative;
+			letter-spacing: 10px;
+			color: #0e3742;
+			width: 100%;
+			-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+			line-height: 0.8em;
+			outline: none;
+			animation: animate 5s linear infinite;
+
+		}
+		@keyframes animate {
+			0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+				color: #0e3742;
+				text-shadow: none;
+			}
+			18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+				color: #fff;
+				text-shadow: 0 0 10px #03bcf4,
+				0 0 20px #03bcf4,
+				0 0 40px #03bcf4,
+				0 0 60px #03bcf4,
+				0 0 80px #03bcf4,
+				0 0 100px #03bcf4;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		function getRandomArbitrary(min, max) {
+			return Math.floor(Math.random() * (max-min)) + min;
+		}
+		$(document).ready(function () {
+			setInterval(function () {
+				var screenHeight = $(document).height();
+				var screenWidth = $(document).width();
+
+				var startLeft = getRandomArbitrary(0, screenWidth);
+
+				var timeRun = getRandomArbitrary(4000, 6000);
+				var opacityR = Math.random() * (1-0.2) + 0.2;
+				var sizeR = getRandomArbitrary(8, 30);
+
+				var endLeft = getRandomArbitrary(startLeft-100, startLeft+100);
+
+				var snow = document.createElement('span');
+
+				$(snow).addClass('snow-item fa fa-gift').css({
+					'position' : 'absolute',
+					'z-index' : 'auto',
+					'color' : 'red',
+					'display' : 'block',
+					'top' : 0,
+					'left' : startLeft,
+					'opacity' : opacityR,
+					'font-size' : sizeR + 'px' 
+				})
+				.appendTo('body')
+				.animate({
+					'top' : screenHeight - sizeR,
+					'left' : endLeft
+				},{
+					duration : timeRun,
+					easing : 'linear',
+					complete: function () {
+						$(this).fadeOut('fast', function () {
+							$(this).remove();
+						});
+					}
+				});
+			}, 500);
+		});
+	</script>
+</head>
+<body>
+	<div class="container py-5">
+		<h1 class="mb-5 text-center text-uppercase">Happy Birthday!</h1>
+		<p class="text-center text-white mt-5">
+			Chúc bạn bàn trên tuổi 19 <span class="text-danger">mạnh khỏe</span> (khỏe hơn trâu :)), gặp nhiều <span class="text-danger">may mắn</span>, có nhiều <span class="text-danger">thành công</span> hơn tuổi 18. Chúc cho <span class="text-danger">tình - tiền - tài</span> như ý bạn nhó!!!!
+			<span>
+				<i class="fa fa-birthday-cake text-danger fa-2x"></i>
+				<i class="fa fa-birthday-cake fa-2x"></i>
+				<i class="fa fa-birthday-cake text-danger fa-2x"></i>
+				<i class="fa fa-birthday-cake fa-2x"></i>
+			</span>
+		</p>
+		<p class="text-center text-white" onclick="showGift()" id="message">
+			<img src="https://iconarchive.com/download/i65262/juliewiens/christmas/gift.ico" class="img-fluid">
+			<span><img src="https://bdsbinhthuan.com.vn/wp-content/uploads/2020/12/Gif-Click-Here-2-2.gif" class="img-fluid"></span>
+		</p>
+		<script type="text/javascript">
+			function showGift() {
+				var message = '<h3 class="text-center text-white">Sinh nhật vui vẻ. Hahaha ☺☺☺☺</h3>';
+				var gif = '<img src="https://khangiaydongtam.com/wp-content/uploads/2017/07/4.gif" class="img-fluid w-50 rounded-circle">';
+				document.getElementById('message').innerHTML = message + gif;
+			}
+		</script>
+	</div>
+</body>
+</html>
