@@ -14,7 +14,7 @@
 			position: relative;
 			overflow: hidden;
 			display: flex;
-			background-color: #B93B8F;
+			background-color: #003333;
 		}
 		h1{
 			position: relative;
@@ -43,7 +43,7 @@
 			}
 		}
 	</style>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function getRandomArbitrary(min, max) {
 			return Math.floor(Math.random() * (max-min)) + min;
 		}
@@ -87,28 +87,29 @@
 				});
 			}, 500);
 		});
-	</script>
+	</script> -->
 </head>
 <body>
 	<div class="container py-5">
 		<h1 class="mb-5 text-center text-uppercase">Happy Birthday!</h1>
 		<p class="text-center text-white mt-5">
-			Chúc bạn tuổi 19 mạnh khỏe (khỏe hơn trâu :)), gặp nhiều may mắn, có nhiều thành công hơn tuổi 18. Chúc cho tình - tiền - tài như ý bạn nhó
+			Nay 1-6, Tết thiếu nhi, chúc "odd" deskmate sang tuổi 19 mạnh khỏe, nhiều may mắn, bớt trẻ trâu (cà khịa bạn ít thôi không nghiệp quật lại khổ :3) và sớm có "bồ" để bạn đây còn ăn cỗ ..........
 			<span>
 				<i class="fa fa-birthday-cake text-warning fa-2x"></i>
 				<i class="fa fa-birthday-cake fa-2x"></i>
 				<i class="fa fa-birthday-cake text-warning fa-2x"></i>
 				<i class="fa fa-birthday-cake fa-2x"></i>
-			</span>. Click hộp bên dưới để nhận quà nhé !!!
+			</span>. Click hộp bên dưới để nhận quà nhó !!!
 		</p>
 		<p class="text-center text-white" onclick="showGift()" id="message">
 			<img src="gift.ico" class="img-fluid">
 		</p>
 		<script type="text/javascript">
 			function showGift() {
-				var message = '<h3 class="text-center text-white">Sinh nhật vui vẻ. Hahaha ☺☺☺☺</h3>';
-				var gif = '<img src="phao.gif" class="img-fluid w-50 rounded-circle">';
-				document.getElementById('message').innerHTML = message + gif;
+				var message = '<h3 class="text-center text-white">Chúc mừng Tết thiếu nhi. Hahaha ☺☺☺☺</h3>';
+				var gif1 = '<img src="phao.gif" class="img-fluid w-50 rounded-circle">';
+				var gif2 = '<img src="laughing.gif" class="img-fluid w-50 rounded-circle mt-3">';
+				document.getElementById('message').innerHTML = message + gif1 + "<br>" + gif2;
 			}
 		</script>
 	</div>
