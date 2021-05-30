@@ -11,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		body{
-			background-color: #003333;
+			background-image: url(bg_birthday.jpg);
 		}
 		h1{
 			letter-spacing: 10px;
@@ -22,6 +22,9 @@
 			outline: none;
 			animation: animate 5s linear infinite;
 
+		}
+		.content{
+			background-color: rgba(130, 45, 244, 0.48);
 		}
 		@keyframes animate {
 			0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
@@ -38,52 +41,39 @@
 				0 0 100px #03bcf4;
 			}
 		}
-	</style>
-	<!-- <script type="text/javascript">
-		function getRandomArbitrary(min, max) {
-			return Math.floor(Math.random() * (max-min)) + min;
+		.wavy{
+			position: relative;
+			-webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
 		}
-		$(document).ready(function () {
-			setInterval(function () {
-				var screenHeight = $(document).height();
-				var screenWidth = $(document).width();
-
-				var startLeft = getRandomArbitrary(0, screenWidth);
-
-				var timeRun = getRandomArbitrary(4000, 6000);
-				var opacityR = Math.random() * (1-0.2) + 0.2;
-				var sizeR = getRandomArbitrary(8, 30);
-
-				var endLeft = getRandomArbitrary(startLeft-100, startLeft+100);
-
-				var snow = document.createElement('span');
-
-				$(snow).addClass('snow-item fa fa-gift').css({
-					'position' : 'absolute',
-					'z-index' : 'auto',
-					'color' : 'white',
-					'display' : 'block',
-					'top' : 0,
-					'left' : startLeft,
-					'opacity' : opacityR,
-					'font-size' : sizeR + 'px' 
-				})
-				.appendTo('body')
-				.animate({
-					'top' : screenHeight - sizeR,
-					'left' : endLeft
-				},{
-					duration : timeRun,
-					easing : 'linear',
-					complete: function () {
-						$(this).fadeOut('fast', function () {
-							$(this).remove();
-						});
-					}
-				});
-			}, 500);
-		});
-	</script> -->
+		.wavy span{
+			position: relative;
+			display: inline-block;
+			animation: animate_ 1s ease-in-out infinite;
+			animation-delay: calc(0.1s * var(--i));
+		}
+		@keyframes animate_{
+			0%{
+				transform: translateY(0px);
+				color: #0e3742;
+				text-shadow: none;
+			}
+			20%{
+				transform: translateY(-20px);
+				color: #FFFF00;
+				text-shadow: none;
+			}
+			40%, 100%{
+				transform: translateX(0px);
+				color: #fff;
+				text-shadow: 0 0 10px #03bcf4,
+				0 0 20px #FFFF00,
+				0 0 40px #00EE00,
+				0 0 60px #FFFF00,
+				0 0 80px #00EE00,
+				0 0 100px #FFFF00;
+			}
+		}
+	</style>
 </head>
 <body>
 	<div class="container py-5">
@@ -91,20 +81,32 @@
 		<p class="text-center">
 			<img src="cake.jpg" class="img-fluid w-50 rounded-circle">
 		</p>
-		<p class="text-center text-white mt-5">
-			Nay 1-6, Tết thiếu nhi, chúc "odd" deskmate sang tuổi 19 mạnh khỏe, nhiều may mắn, bớt trẻ trâu (cà khịa bạn ít thôi không nghiệp quật lại khổ :3) và sớm có "bồ" để bạn đây còn ăn cỗ ..........
+		<p class="text-center text-white mt-5 border rounded p-2 content">
+			Nay 1-6 à, Tết thiếu nhi, chúc "old" deskmate sang tuổi 19 mạnh khỏe, nhiều may mắn, bớt trẻ trâu (cà khịa bạn ít thôi không nghiệp quật lại khổ :3) và sớm có "bồ" để bạn đây còn ăn cỗ ..........
 			<span>
 				<i class="fa fa-birthday-cake text-warning fa-2x"></i>
 				<i class="fa fa-birthday-cake fa-2x"></i>
 				<i class="fa fa-birthday-cake text-warning fa-2x"></i>
 				<i class="fa fa-birthday-cake fa-2x"></i>
-			</span>. Click hộp bên dưới để nhận quà nhó !!!
+			</span>.
 		</p>
+		<div class="wavy text-center text-white" id="wavy">
+			<span style="--i:1;">Click</span>
+			<span style="--i:2;"> hộp</span>
+			<span style="--i:3;"> bên</span>
+			<span style="--i:4;"> dưới</span>
+			<span style="--i:5;"> để</span>
+			<span style="--i:6;"> nhận</span>
+			<span style="--i:7;"> quà</span>
+			<span style="--i:8;"> nhó</span>
+			<span style="--i:9;"> !!!</span>
+		</div>
 		<p class="text-center text-white" onclick="showGift()" id="message">
 			<img src="gift.ico" class="img-fluid">
 		</p>
 		<script type="text/javascript">
 			function showGift() {
+				document.getElementById("wavy").remove();
 				var message = '<h3 class="text-center text-white">Chúc mừng Tết thiếu nhi. Hahaha ☺☺☺☺</h3>';
 				var gif1 = '<img src="phao.gif" class="img-fluid w-50 rounded-circle">';
 				var gif2 = '<img src="laughing.gif" class="img-fluid w-50 rounded-circle mt-3">';
